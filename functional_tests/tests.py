@@ -51,7 +51,7 @@ class NewVisitorTest(LiveServerTestCase):  # (1)
         # The page updates again,and now shows both items on her list
         self.wait_for_row_in_list_table('1: Buy peacock feathers')
         self.wait_for_row_in_list_table('2: Use peacock feathers to make a fly')
-        self.fail('Finish the test!')  # (5)
+        # self.fail('Finish the test!')  # (5)
 
     def wait_for_row_in_list_table(self, row_text):
         start_time = time.time()
