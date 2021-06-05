@@ -1,0 +1,12 @@
+[Unit]
+Description=Gunicorn server for 120.53.108.140
+
+
+[Service]
+Restart=on-failure
+User=wanglong
+WorkingDirectory=/root/sites/120.53.108.140/source
+ExecStart=/root/sites/120.53.108.140/virtualenv/bin/gunicorn --bind unix:/root/sites/120.53.108.140.socket superlists.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
